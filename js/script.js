@@ -33,26 +33,29 @@ function showPage (pageNumber, currentPeople) {
 // function appendPageLinks function that build the navigation div below the people names
 function appendPageLinks () {
    const numberOfPages = Math.ceil(ul.children.length / 10);
-   let currentPeople = fetchCurrentPeople();
-   let navigationDiv = newElement('div', 'pagination');
-   let navigation = '<ul>';
-   for (let x=0; x<numberOfPages; x++)
-   {
-      //if x is not the first page, active class will note be applied 
-      if(x) {
-         navigation += `<li><a href="#">${x+1}</a></li>`;
+      let currentPeople = fetchCurrentPeople();
+      let navigationDiv = newElement('div', 'pagination');
+      let navigation = '<ul>';
+      //does pagination only if there are more than ten people
+      if(numberOfPages > 1) {
+         for (let x=0; x< numberOfPages; x++)
+         {
+            //if x is not the first page, active class will note be applied 
+            if(x) {
+               navigation += `<li><a href="#">${x+1}</a></li>`;
+            }
+            //otherwise it means x is 0 so the first page, so active class needs to be applied
+            else {
+               navigation += `<li><a class="active" href="#">${x+1}</a></li>`;
+               //if it's the first page then showPage function will be called to display the first page
+               showPage(1, currentPeople);
+            }
+         }
       }
-      //otherwise it means x is 0 so the first page, so active class needs to be applied
-      else {
-         navigation += `<li><a class="active" href="#">${x+1}</a></li>`;
-         //if it's the first page then showPage function will be called to display the first page
-         showPage(1, currentPeople);
-      }
-   }
-   navigation += '</ul>';
-   navigationDiv.innerHTML = navigation;
-   ul.parentNode.appendChild(navigationDiv);
-   addFunctionalityToPageLinks(navigationDiv, currentPeople);
+      navigation += '</ul>';
+      navigationDiv.innerHTML = navigation;
+      ul.parentNode.appendChild(navigationDiv);
+      addFunctionalityToPageLinks(navigationDiv, currentPeople);
 };
 
 // function addFunctionalityToPageLinks function adds an event listener on the page number navigation 
