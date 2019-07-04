@@ -20,6 +20,9 @@ function searchFunction(searchedString) {
         }
     }
     appendPageLinks();
+    if(ul.innerHTML === '') {
+        ul.innerHTML = `Nope, there's nobody registered with that name. Try again.`;
+    }
 };
 
 //appending functionality to the search button, so it triggers the search function and sends the string searched by the user as an argument 
