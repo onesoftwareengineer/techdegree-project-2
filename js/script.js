@@ -85,7 +85,7 @@ function addFunctionalityToPageLinks (navigationDiv, currentPeople) {
    });
 }
 
-//function searchFunction searches through the initial list people names and displays people found
+// function searchFunction searches through the initial list people names and displays people found
 function searchFunction(searchedString) {
     //clears page li elements from people ul list
     ul.innerHTML = '';
@@ -106,7 +106,7 @@ function searchFunction(searchedString) {
     }
 };
 
-//function createSearchBox creates the search box and adds functionality
+// function createSearchBox creates the search box and adds functionality
 function createSearchBox () {
       const header = document.querySelector('div.page-header');
       const searchDiv = newElement('div','student-search');
