@@ -3,5 +3,5 @@ Usage of javascript to add pagination (navigation system) and a dynamic search f
 Principle of progressive enhacement is also used. The page still displays entries without JavaScript turned on.
 
 ##Screenshots
-![image](https://raw.githubusercontent.com/onesoftwareengineer/techdegree-project-2/master/screenshot1.JPG
+![image](https://raw.githubusercontent.com/onesoftwareengineer/techdegree-project-2/master/screenshot1.JPG)
 ![image](https://raw.githubusercontent.com/onesoftwareengineer/techdegree-project-2/master/screenshot2.JPG)
