@@ -5,5 +5,6 @@ Principle of progressive enhacement is also used. The page still displays entrie
 ## Screenshots
 ![image](https://raw.githubusercontent.com/onesoftwareengineer/techdegree-project-2/master/screenshot1.JPG)
 navigation system
+
 ![image](https://raw.githubusercontent.com/onesoftwareengineer/techdegree-project-2/master/screenshot2.JPG)
 dynamic search feature
